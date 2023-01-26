@@ -1,10 +1,16 @@
-namespace Tarefas.Web.Controllers
-{
-    public class TarefaViewModel{
-     
-            public string Titulo {get;set;}
-            public string Descricao {get;set;}
 
+using System.ComponentModel;
+
+namespace Tarefas.Web.Models
+{
+    public class TarefaViewModel
+    {
+        [DisplayName("Título")]
+        public string? Titulo{get;set;}
         
+        public int id {get;set;}
+        [DisplayName("Descrição")]
+        public string? Descricao {get;set;}
     }
+
 }

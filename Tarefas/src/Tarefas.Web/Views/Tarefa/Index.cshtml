@@ -1,0 +1,20 @@
+@model IEnumerable<Tarefas.Web.Models.TarefaViewModel>
+    <table class="table">
+        <tr>
+            <td>Titulo</td>
+            <td> Descricao</td>
+            
+        </tr>
+       
+       
+        @foreach (var item in Model)
+        { 
+         <tr>
+            <td>@item.id;</td>
+            <td>@item.Descricao</td>
+            <td>@item.Titulo</td>
+            <td> <a asp-action=" Details" asp-controller="Tarefas"  asp-route-id = "@item.id"><Details></Details></a></td>
+        
+        </tr>
+        }
+    </table>
